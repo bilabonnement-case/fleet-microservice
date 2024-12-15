@@ -1,0 +1,46 @@
+tags:
+  - Fleet
+summary: Opret ny bil i flåden
+description: Tilføj en ny bil til fleet-databasen med detaljer om bilen.
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          stelnummer:
+            type: string
+            example: "WBA1234567890"
+          abonnement_id:
+            type: integer
+            example: 1
+          mærke:
+            type: string
+            example: "BMW"
+          model:
+            type: string
+            example: "X5"
+          månedlig_pris:
+            type: number
+            example: 5999.99
+          kilometer_grænse:
+            type: integer
+            example: 1500
+          kilometerafstand:
+            type: integer
+            example: 500
+          registreringsnummer:
+            type: string
+            example: "AB12345"
+          status:
+            type: string
+            example: "Tilgængelig"
+          admin_id:
+            type: integer
+            example: 42
+responses:
+  '201':
+    description: Køretøj oprettet
+  '500':
+    description: Serverfejl

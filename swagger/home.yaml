@@ -1,0 +1,29 @@
+tags:
+  - General
+summary: Get available endpoints
+description: Provides a list of all available endpoints in the service.
+responses:
+  '200':
+    description: List of available endpoints
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            service:
+              type: string
+              example: "Fleet-Service"
+            available_endpoints:
+              type: array
+              items:
+                type: object
+                properties:
+                  path:
+                    type: string
+                    example: "/create_vehicle"
+                  method:
+                    type: string
+                    example: "POST"
+                  description:
+                    type: string
+                    example: "Opret ny bil i flåden"

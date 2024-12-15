@@ -1,0 +1,32 @@
+tags:
+  - Fleet
+summary: Opdater køretøjsoplysninger
+description: Opdater specifikke felter for et køretøj i flåden.
+parameters:
+  - in: path
+    name: bil_id
+    schema:
+      type: integer
+    required: true
+    description: Bilens ID.
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          stelnummer:
+            type: string
+            example: "WBA1234567890"
+          kilometerafstand:
+            type: integer
+            example: 1000
+          status:
+            type: string
+            example: "Under vedligehold"
+responses:
+  '200':
+    description: Køretøj opdateret
+  '404':
+    description: Køretøj ikke fundet

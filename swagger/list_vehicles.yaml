@@ -1,0 +1,7 @@
+tags:
+  - Fleet
+summary: Liste over alle køretøjer
+description: Hent en liste over alle køretøjer i flåden.
+responses:
+  '200':
+    description: Liste hentet

@@ -1,0 +1,16 @@
+tags:
+  - Fleet
+summary: Hent bil detaljer
+description: Få detaljer for et specifikt køretøj i flåden baseret på bil ID.
+parameters:
+  - in: path
+    name: bil_id
+    schema:
+      type: integer
+    required: true
+    description: Bilens ID.
+responses:
+  '200':
+    description: Køretøj fundet
+  '404':
+    description: Køretøj ikke fundet
