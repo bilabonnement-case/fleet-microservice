@@ -19,7 +19,7 @@ app.config['SWAGGER'] = {
 swagger = Swagger(app)
 
 # Database Opsætning
-DATABASE = "fleet-database.db"
+DATABASE = "/app/data/fleet-database.db"
 
 
 def init_db():
