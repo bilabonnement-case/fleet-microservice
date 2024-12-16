@@ -161,4 +161,4 @@ def list_vehicles():
 
 
 if __name__ == '__main__':
-    app.run(debug=bool(int(os.getenv('FLASK_DEBUG', 0))), host='0.0.0.0', port=5005)
+    app.run(debug=bool(int(os.getenv('FLASK_DEBUG', 0))), host='0.0.0.0', port=5003)
